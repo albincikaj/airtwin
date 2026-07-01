@@ -1,0 +1,9 @@
+.venv
+__pycache__
+*.pyc
+.git
+.claude
+docs
+*.md
+data/processed
+.python-version.bak
