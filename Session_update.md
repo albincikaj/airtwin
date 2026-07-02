@@ -1,6 +1,6 @@
 # AirTwin: Session Update
 
-Last updated: Wednesday, July 1, 2026 (final build day, see Timeline reality below).
+Last updated: Thursday, July 2, 2026 (presentation polish pass; see Timeline reality below).
 This file is the single source of truth for state. Read this and task.md in
 full before changing anything. Update both before ending any session.
 
@@ -56,6 +56,10 @@ ship. Anything not marked P0 should be cut without debate if time runs short.
    Digital Twin (sensor data in, control decisions automatically flow back
    out and change what gets sensed next). Everything before this file was a
    well-built Shadow. This file is what makes it a Twin.
+10. Simplified the dashboard for a non-technical presentation audience: the
+    default view now leads with recommendations and plain-language outcomes,
+    while exact scores, metric names, and confusion-matrix counts live behind
+    expandable technical sections.
 
 ## 4. Verified numbers (reuse these, do not re-derive)
 
@@ -156,3 +160,20 @@ ship. Anything not marked P0 should be cut without debate if time runs short.
   40-vs-0 proof re-confirmed (shadow=40 min over 1000 ppm, peak 1189; twin=0
   min, peak 964). IDE "cannot find module" diagnostics for joblib/streamlit
   are false positives from the linter not resolving the uv venv path.
+
+- Thursday, July 2, 2026: presentation/copywriting pass completed in `src/app.py`.
+  Removed the always-visible hybrid/rule/ML score triplet, rewrote the
+  evaluation tab to lead with caught-problems and false-alarm language, and
+  moved exact metrics, score breakdowns, action tables, and closed-loop raw
+  details behind collapsed expanders. No calculation, model, simulator, or
+  evaluation logic was changed.
+- Thursday, July 2, 2026 (session 2): audit follow-up on the same pass. Fixed
+  the remaining raw snake_case chart legends (forecast now reads "If nothing
+  is done" vs "Boost ventilation (recommended)"; closed-loop legend leads with
+  "No control" / "Automatic control"), removed a duplicated rule-explanation
+  caption from the recommendation panel, rewrote the evaluation fallback
+  notice that referenced internal file names, moved the "chronological
+  hold-out" phrase into the technical expanders, and reworded the sidebar
+  known-limits bullet to plain language. Verified in a headless browser: all
+  three tabs render, closed-loop run works, no console errors. Copy only —
+  no logic changed.
